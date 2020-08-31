@@ -1,0 +1,135 @@
+.text {
+  font-size: 160px;
+  margin: 0px;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.inputSearch {
+  width: 10.5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  border: none;
+  box-shadow: 1px 1px;
+}
+
+.btn {
+  width: 5rem;
+  height: 2.5rem;
+  margin: 5px;
+}
+
+.align_main {
+  display: flex;
+  /* align-items: baseline; */
+  justify-content: space-between;
+}
+
+.inputDiv {
+  margin-top: 50px;
+}
+
+.footer {
+  color: white;
+  background-color: black;
+  margin-top: 5rem;
+  padding: 20px 0px 20px 0px;
+}
+
+.footerText {
+  color: white;
+  margin: 20px;
+  text-align: end;
+}
+
+.form_align {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_author {
+  width: 80%;
+  margin-top: 20px;
+  padding: 10px;
+  /* margin: 5px; */
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); * */
+}
+
+.input_title {
+  width: 80%;
+  padding: 10px;
+  margin: 15px;
+  margin-left: 0px;
+}
+
+.input_textarea {
+  width: 80%;
+  margin-top: 20px;
+  padding: 10px;
+  height: auto;
+}
+
+.img_selected {
+  width: 50%;
+  height: auto;
+}
+
+.submit {
+  margin-top: 30px;
+  width: 10%;
+}
+
+a {
+  /* color: white; */
+  text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+  form {
+    margin-top: 50px;
+  }
+  .text {
+    margin: 0;
+    font-size: 3.5rem;
+    position: relative;
+  }
+
+  /* .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  } */
+
+  .submit {
+    width: 30%;
+  }
+
+  .btn {
+    /* margin: 5px; */
+    width: 20vw;
+    height: 5vh;
+  }
+
+  .inputSearch {
+    margin: 5px;
+  }
+
+  .align_main {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  /* .footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  } */
+}
