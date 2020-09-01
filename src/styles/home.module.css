@@ -26,7 +26,7 @@
 
 .align_main {
   display: flex;
-  /* align-items: baseline; */
+  align-items: baseline;
   justify-content: space-between;
 }
 
@@ -42,9 +42,23 @@
 }
 
 .footerText {
-  color: white;
   margin: 20px;
   text-align: end;
+}
+
+.addpost {
+  background-color: gray;
+  padding: 15px;
+  color: black;
+  margin: 10px;
+}
+
+.addpostDiv {
+  margin-top: 20px;
+}
+
+.footerText a {
+  color: white;
 }
 
 .form_align {
@@ -105,6 +119,9 @@ a {
     left: 0;
     width: 100%;
   } */
+
+  .addpostDiv {
+  }
 
   .submit {
     width: 30%;

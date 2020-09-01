@@ -34,10 +34,12 @@ export default class Navbar extends Component {
               Enter
             </Button>
           </div>{" "}
-          <Link className={classes.addpost} to="/addPost">
-            {" "}
-            + ADD POST
-          </Link>
+          <div className={classes.addpostDiv}>
+            <Link className={classes.addpost} to="/addPost">
+              {" "}
+              + ADD POST
+            </Link>
+          </div>
         </div>
 
         <div className={classes.blogs}>
