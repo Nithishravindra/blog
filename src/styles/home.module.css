@@ -8,20 +8,29 @@
   flex-direction: column;
   align-items: flex-start;
 }
+.searchDiv {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
 
 .inputSearch {
-  width: 10.5rem;
+  /* width: 30rem; */
   height: 2.5rem;
   font-size: 1rem;
   padding-left: 0.5rem;
+  font-weight: lighter;
   border: none;
-  box-shadow: 1px 1px;
+  box-shadow: 5px 10px 15px #888888;
+  background-color: whitesmoke;
 }
 
 .btn {
   width: 5rem;
   height: 2.5rem;
   margin: 5px;
+  box-shadow: 5px 10px 15px #888888;
+  background-color: whitesmoke;
 }
 
 .align_main {
@@ -32,6 +41,7 @@
 
 .inputDiv {
   margin-top: 50px;
+  margin-left: 10px;
 }
 
 .footer {
@@ -46,15 +56,24 @@
   text-align: end;
 }
 
-.addpost {
+/* .addpost {
   background-color: gray;
   padding: 15px;
   color: black;
   margin: 10px;
+} */
+
+.addpostButton {
+  margin-top: 20px;
+  background-color: #f05033;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  border-style: none;
 }
 
-.addpostDiv {
-  margin-top: 20px;
+.addpostButton:hover {
+  background-color: black;
 }
 
 .footerText a {
@@ -70,8 +89,6 @@
   width: 80%;
   margin-top: 20px;
   padding: 10px;
-  /* margin: 5px; */
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); * */
 }
 
 .input_title {
@@ -99,8 +116,39 @@
 }
 
 a {
-  /* color: white; */
   text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: initial;
+  padding: 5px;
+}
+
+.validator {
+  color: #ef2929;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.file {
+  margin: 15px 15px 15px 0px;
+}
+
+a:hover {
+  color: #f05033;
+  background-color: black;
+  border-radius: 5px;
+  /* padding:2px; */
+}
+
+.homeLink_div_addPost {
+  margin-top: 25px;
+}
+
+.homeLink_div_addPost a:hover {
+  color: black;
+  background-color: white;
 }
 
 @media screen and (max-width: 500px) {
@@ -113,14 +161,8 @@ a {
     position: relative;
   }
 
-  /* .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  } */
-
   .addpostDiv {
+    margin-top: 10px;
   }
 
   .submit {
@@ -140,13 +182,4 @@ a {
   .align_main {
     display: block;
   }
-}
-
-@media screen and (min-width: 700px) {
-  /* .footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  } */
 }
