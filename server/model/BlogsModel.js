@@ -16,11 +16,8 @@ const blogSchema = new mongoose.Schema({
     validate: [validator.isEmail, 'Please provide a valid email']
   },
   photo: {
-    // data: Buffer,
-    // contentType: String,
     type: String,
     required: [true, 'Please provide image']
-    // default: "default.jpg",
   },
   text: {
     type: String,
@@ -29,8 +26,14 @@ const blogSchema = new mongoose.Schema({
   averageRating: {
     type: Number,
     default: 1
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now()
   }
 });
+
+blogSchema.index({ averageRating: -1 });
 
 const Blogs = mongoose.model('Blogs', blogSchema);
 

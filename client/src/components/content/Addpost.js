@@ -75,7 +75,7 @@ export default class Addpost extends Component {
 
   fhandleChange(event) {
     this.setState({
-      file: URL.createObjectURL(event.target.files[0]),
+      file: event.target.files[0],
     });
   }
 
@@ -89,10 +89,21 @@ export default class Addpost extends Component {
       title: this.state.postTitle,
       email: this.state.email,
       text: this.state.description,
+      createdAt: this.state.date,
     };
 
     formData.append("photo", this.state.file);
     formData.append("data", JSON.stringify(data));
+
+    const config = {
+      headers: {
+        "content-type": "multipart/form-data",
+      },
+    };
+
+    for (var pair of formData.entries()) {
+      console.log(pair[0] + ", " + pair[1]);
+    }
 
     axios
       .post("http://localhost:4000/api/v1/blogs", formData, {})
@@ -160,7 +171,11 @@ export default class Addpost extends Component {
             onChange={this.fhandleChange}
             className={classes.file}
           />
-          <img className={classes.img_selected} src={this.state.file} />
+          <img
+            className={classes.img_selected}
+            src={this.state.file}
+            alt="file"
+          />
 
           <div>
             <textarea

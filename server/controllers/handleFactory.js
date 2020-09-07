@@ -12,7 +12,7 @@ exports.deleteOne = (Model) =>
 
     res.status(204).json({
       status: 'success',
-      data: null,
+      data: null
     });
   });
 
@@ -29,8 +29,8 @@ exports.getOne = (Model, popOptions) =>
     res.status(200).json({
       status: 'success',
       data: {
-        data: doc,
-      },
+        data: doc
+      }
     });
   });
 
@@ -42,8 +42,8 @@ exports.getAll = (Model) =>
       status: 'success',
       results: doc.length,
       data: {
-        data: doc,
-      },
+        data: doc
+      }
     });
   });
 
@@ -62,7 +62,7 @@ exports.createReview = (Model) =>
     res.status(201).json({
       status: 'success',
       data: {
-        data: doc,
-      },
+        data: doc
+      }
     });
   });

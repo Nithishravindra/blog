@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Blog = require('./BlogsModel');
 
 const reviewSchema = new mongoose.Schema({
   name: {
@@ -25,29 +26,29 @@ const reviewSchema = new mongoose.Schema({
   }
 });
 
-reviewSchema.statics.calAvgRatings = async function (blogID) {
+reviewSchema.statics.calAvgRatings = async function (blogId) {
   const stats = await this.aggregate([
     {
-      $match: { blog: blodID }
+      $match: { blog: blogId }
     },
     {
       $group: {
         _id: '$blog',
-        nRating: { $sum: 1 },
         avgRating: { $avg: '$rating' }
       }
     }
   ]);
 
+  await Blog.findByIdAndUpdate(blogId, {
+    averageRating: stats[0].avgRating
+  });
+
   console.log(stats);
 };
 
-reviewSchema.pre('save', function (next) {
+reviewSchema.post('save', function () {
   this.constructor.calAvgRatings(this.blog);
-
   // Review.calAvgRatings(this.blog);
-
-  next();
 });
 
 const Review = mongoose.model('Review', reviewSchema);
