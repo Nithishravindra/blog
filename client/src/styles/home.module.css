@@ -1,0 +1,185 @@
+.text {
+  font-size: 160px;
+  margin: 0px;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.searchDiv {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.inputSearch {
+  /* width: 30rem; */
+  height: 2.5rem;
+  font-size: 1rem;
+  padding-left: 0.5rem;
+  font-weight: lighter;
+  border: none;
+  box-shadow: 5px 10px 15px #888888;
+  background-color: whitesmoke;
+}
+
+.btn {
+  width: 5rem;
+  height: 2.5rem;
+  margin: 5px;
+  box-shadow: 5px 10px 15px #888888;
+  background-color: whitesmoke;
+}
+
+.align_main {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.inputDiv {
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.footer {
+  color: white;
+  background-color: black;
+  margin-top: 5rem;
+  padding: 20px 0px 20px 0px;
+}
+
+.footerText {
+  margin: 20px;
+  text-align: end;
+}
+
+/* .addpost {
+  background-color: gray;
+  padding: 15px;
+  color: black;
+  margin: 10px;
+} */
+
+.addpostButton {
+  margin-top: 20px;
+  background-color: #f05033;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  border-style: none;
+}
+
+.addpostButton:hover {
+  background-color: black;
+}
+
+.footerText a {
+  color: white;
+}
+
+.form_align {
+  display: flex;
+  flex-direction: column;
+}
+
+.input_author {
+  width: 80%;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.input_title {
+  width: 80%;
+  padding: 10px;
+  margin: 15px;
+  margin-left: 0px;
+}
+
+.input_textarea {
+  width: 80%;
+  margin-top: 20px;
+  padding: 10px;
+  height: auto;
+}
+
+.img_selected {
+  width: 50%;
+  height: auto;
+}
+
+.submit {
+  margin-top: 30px;
+  width: 10%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-size: initial;
+  padding: 5px;
+}
+
+.validator {
+  color: #ef2929;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.file {
+  margin: 15px 15px 15px 0px;
+}
+
+a:hover {
+  color: #f05033;
+  background-color: black;
+  border-radius: 5px;
+  /* padding:2px; */
+}
+
+.homeLink_div_addPost {
+  margin-top: 25px;
+}
+
+.homeLink_div_addPost a:hover {
+  color: black;
+  background-color: white;
+}
+
+@media screen and (max-width: 500px) {
+  form {
+    margin-top: 50px;
+  }
+  .text {
+    margin: 0;
+    font-size: 3.5rem;
+    position: relative;
+  }
+
+  .addpostDiv {
+    margin-top: 10px;
+  }
+
+  .submit {
+    width: 30%;
+  }
+
+  .btn {
+    /* margin: 5px; */
+    width: 20vw;
+    height: 5vh;
+  }
+
+  .inputSearch {
+    margin: 5px;
+  }
+
+  .align_main {
+    display: block;
+  }
+}
