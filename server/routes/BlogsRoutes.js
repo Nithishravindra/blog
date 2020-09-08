@@ -66,7 +66,7 @@ router
   });
 
 router.route('/getMainBlogs').get(blogController.getMaxRatingBlog);
-router.route('/searchBlogs/:authorName').post(blogController.searchBlogs);
+router.route('/searchBlogs/:searchItem').post(blogController.searchBlogs);
 
 router
   .route('/:id')
