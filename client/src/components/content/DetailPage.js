@@ -2,8 +2,33 @@ import React, { Component } from "react";
 import classes from "../../styles/card.module.css";
 import { Link } from "react-router-dom";
 import { Container } from "reactstrap";
+import Rater from "react-rater";
+import "react-rater/lib/react-rater.css";
 
 export default class DetailPage extends Component {
+  state = {
+    reviews: [
+      {
+        id: 1,
+        name: "p",
+        comment: "An amazing article",
+        rating: 3,
+      },
+      {
+        id: 1,
+        name: "n",
+        comment: "Cool one bruh",
+        rating: 4,
+      },
+    ],
+  };
+
+  // handleRate(e) {
+  //   this.setState({
+  //     //   some-property     :e.rating;
+  //   });
+  // }
+
   render() {
     return (
       <Container>
@@ -13,7 +38,12 @@ export default class DetailPage extends Component {
             <h3>
               Author - <strong>Nithish R</strong>
             </h3>
-            Published on 31, Aug 2020
+            <div className={classes.detailRater}>
+              Published on 31, Aug 2020
+              <span>
+                <Rater rating={2} />
+              </span>
+            </div>
           </div>
           <img src={require("../../download.png")} alt="" />
           <p className={classes.content_Detail}>
@@ -36,6 +66,27 @@ export default class DetailPage extends Component {
             the code or push changes.
           </p>
         </div>
+
+        {/* comments */}
+
+        <div>
+          {this.state.reviews.map((item, index) => (
+            <div key={index}>
+              Name: {item.name}, Comment: {item.comment},{" "}
+              <Rater rating={item.rating} />
+            </div>
+          ))}
+        </div>
+
+        {/* button to be added which accepts   
+          1. Name, 
+          2. Comment,
+          3. Star */}
+
+        {/* for star use this  */}
+
+        <Rater onRate={this.handleRate} name="userRating" />
+
         <div className={classes.homeLink_div}>
           <Link className={classes.homeLink} to="/">
             Back to home

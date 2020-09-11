@@ -95,12 +95,6 @@ export default class Addpost extends Component {
     formData.append("photo", this.state.file);
     formData.append("data", JSON.stringify(data));
 
-    const config = {
-      headers: {
-        "content-type": "multipart/form-data",
-      },
-    };
-
     for (var pair of formData.entries()) {
       console.log(pair[0] + ", " + pair[1]);
     }
