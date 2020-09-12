@@ -100,6 +100,10 @@
 }
 
 @media (max-width: 500px) {
+  .content {
+    margin-right: 20px;
+  }
+
   .detailRater {
     display: block;
   }

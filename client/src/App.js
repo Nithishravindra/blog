@@ -16,11 +16,7 @@ function App() {
         {/* <Navbar /> */}
         <Switch>
           <Route exact path="/" component={Content}></Route>
-          <Route
-            exact
-            path="/detailPage/:authorName/:blogID"
-            component={DetailPage}
-          />
+          <Route exact path="/detailPage/:blogID" component={DetailPage} />
           <Route exact path="/addPost" component={AddPost} />
         </Switch>
       </Layout>

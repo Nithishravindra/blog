@@ -18,9 +18,10 @@ exports.getMaxRatingBlog = catchAsync(async (req, res, next) => {
     }
   ]);
   // console.log(blog);
-  if (!blog) {
+  if (blog.length == 0) {
     return next(new AppError('No blogs found', 404));
   }
+
   res.status(200).json({
     status: 'success',
     results: blog.length,
@@ -34,7 +35,9 @@ exports.searchBlogs = catchAsync(async (req, res, next) => {
   console.log('Hello');
   // console.log(req.params);
 
-  let blog = await Blog.find({ $text: { $search: req.params.searchItem } });
+  let blog = await Blog.find({
+    $text: { $search: req.params.searchItem }
+  }).populate('reviews');
 
   if (!blog) return next(new AppError('No Blogs found', 404));
 
