@@ -1,0 +1,44 @@
+.addpost_row {
+  margin-top: 40px;
+}
+
+.addpost_row h1 {
+  font-weight: bold;
+}
+
+.form_align {
+  margin-top: 2rem;
+}
+
+.input_textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  height: auto;
+}
+
+.img_selected {
+  width: 25%;
+  margin-top: 30px;
+}
+
+.validator {
+  color: #ef2929;
+  font-size: 15px;
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.homeLink {
+  margin-top: 2rem;
+}
+
+.homeLink a {
+  font-size: 1.5rem;
+}
+
+.homeLink a:hover {
+  color: orange;
+  text-decoration: none;
+}

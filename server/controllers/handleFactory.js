@@ -50,11 +50,9 @@ exports.getAll = (Model) =>
 exports.createReview = (Model) =>
   catchAsync(async (req, res, next) => {
     const blog = await Blog.findById(req.params.id);
-
     if (!blog) {
       return next(new AppError('No Blog found with that ID', 404));
     }
-
     const doc = await Model.create(
       Object.assign(req.body, { blog: req.params.id })
     );

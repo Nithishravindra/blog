@@ -32,7 +32,6 @@ exports.getMaxRatingBlog = catchAsync(async (req, res, next) => {
 });
 
 exports.searchBlogs = catchAsync(async (req, res, next) => {
-  console.log('Hello');
   // console.log(req.params);
 
   let blog = await Blog.find({

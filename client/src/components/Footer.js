@@ -1,5 +1,5 @@
-import React from "react";
-import classes from "../styles/home.module.css";
+import React from 'react';
+import classes from '../styles/home.module.css';
 
 function Footer() {
   return (
