@@ -68,6 +68,12 @@
   margin-bottom: 15px;
 }
 
+.add_comment_button {
+  color: black !important;
+  background-color: white !important;
+  margin-top: 3rem;
+}
+
 @media screen and (max-width: 500px) {
   .content {
     margin-right: 0rem;

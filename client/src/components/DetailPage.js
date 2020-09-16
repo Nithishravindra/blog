@@ -157,7 +157,7 @@ export default class DetailPage extends Component {
         <Row>
           <Col>
             <Button
-              className={classes.margin_top}
+              className={classes.add_comment_button}
               onClick={this.handleModal.bind(this)}
             >
               {' '}

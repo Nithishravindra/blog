@@ -66,82 +66,19 @@
   color: orange;
 }
 
-/* ////////////// */
-.links_li {
-  margin-top: 10px;
-  font-size: 22px;
-}
-
-.detailCard {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  width: 60%;
-  margin-left: 15%;
-  padding: 50px;
-}
-
-.cardTitle_Detail {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 3rem;
-}
-
-.addpost {
-  color: black;
-}
-
-.content_Detail {
-  font-size: 20px;
-  line-height: 32px;
-  margin-top: 3rem;
-  letter-spacing: -0.003em;
-}
-
-.author {
-  margin: 20px;
-}
-
-.homeLink_div {
-  margin-top: 2rem;
-}
-
-.homeLink {
-  color: black;
-}
-
-.detailRater {
-  display: flex;
-  justify-content: space-between;
-}
-
 @media (max-width: 500px) {
-  .content {
-    margin-right: 20px;
-  }
-
   .blog_border {
     width: 100%;
-    margin: 0;
+    margin-top: 20px;
     border: none;
     padding: 0;
   }
 
   .featuredCards {
-    margin: 0px;
+    margin: 10px;
   }
 
   .featuredblogs_links {
     margin: 0px;
-  }
-
-  .detailRater {
-    display: block;
-  }
-
-  .detailCard {
-    display: block;
-    box-shadow: none;
-    width: 100%;
-    padding: 0px;
-    margin-left: 0px;
   }
 }

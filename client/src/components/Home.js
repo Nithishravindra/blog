@@ -58,10 +58,9 @@ export default class Home extends Component {
               onChange={this.handleChange}
             />
           </Col>
-          <Col>
+          <Col className={classes.enter_button}>
             <Button
               outline
-              // color="secondary"
               className={classes.home_search_button}
               onClick={this.getSearchResult}
             >

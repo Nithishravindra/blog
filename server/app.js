@@ -13,7 +13,6 @@ app.use('/public', express.static('public'));
 
 app.use(cors());
 // app.use(express.json());
-console.log(Date.now());
 
 app.use('/api/v1/blogs', blogRouter);
 app.use('/api/v1/reviews', reviewRouter);

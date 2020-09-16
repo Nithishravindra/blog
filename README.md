@@ -18,7 +18,17 @@ A full stack React, Node.js and Express application that accepts any user to add
 
 - A user can add a blog.
 - Can add comment and rate.
-- search blog by author name or blog title.
+- Can search a blog by author name or blog title.
+
+### Features
+
+- Home page/ main page has a
+
+### Demo
+
+![Preview MainPage](client/src/assets/mainpage.png)
+![Preview AddBlog](client/src/assets/addblog.png)
+![Preview DetailPage](client/src/assets/detailpage.png)
 
 ### LICENSE
 
