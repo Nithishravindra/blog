@@ -11,8 +11,8 @@ A full stack React, Node.js and Express application that accepts any user to add
 
 ### Development
 
-- API's are built using Node/Express.
-- The backend is a MongoDB document database that has Rating and Blogs collection.
+- API is built using Node/Express.
+- MongoDB is used as a database and has 'Rating' and 'Blogs' collection.
 
 ### Usecase
 
@@ -22,7 +22,11 @@ A full stack React, Node.js and Express application that accepts any user to add
 
 ### Features
 
-- Home page/ main page has a
+- The Home page or main page will have five blogs based on the max rating. The high-rated blog will be displayed with its content along with the links to the other blog.
+- Users can search blog based author name or title. If the result is successful the links to 'detailpage' is rendered.
+- A User is redirected to /addpost by clicking on ADD POST button. Inputs are to be given according to form validation.
+- Can add comment and rate a blog in /detailpage.
+- Supports both UI and UX view.
 
 ### Demo
 
